@@ -1,0 +1,11 @@
+---
+interface Props {
+  navItems: string[]
+}
+
+const { navItems } = Astro.props
+---
+
+<div class='flex'>
+  {navItems.map((item) => <a href={item.toLowerCase()}>{item}</a>)}
+</div>
