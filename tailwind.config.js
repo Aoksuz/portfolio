@@ -19,6 +19,7 @@ module.exports = {
         light: '#E5E6E0',
         DEFAULT: '#727272',
       },
+      white: '#FAFAFA',
     },
     fontFamily: {
       title: ['Saira', 'sans-serif'],

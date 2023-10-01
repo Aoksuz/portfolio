@@ -7,5 +7,9 @@ const { navItems } = Astro.props
 ---
 
 <div class='flex'>
-  {navItems.map((item) => <a href={item.toLowerCase()}>{item}</a>)}
+  {
+    navItems.map((item) => (
+      <a href={item === 'Home' ? '/' : item.toLowerCase()}>{item}</a>
+    ))
+  }
 </div>
