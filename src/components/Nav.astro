@@ -6,10 +6,16 @@ interface Props {
 const { navItems } = Astro.props
 ---
 
-<div class='flex'>
-  {
-    navItems.map((item) => (
-      <a href={item === 'Home' ? '/' : item.toLowerCase()}>{item}</a>
-    ))
-  }
+<div class='bg-primary flex h-10 font-bold'>
+  <div class='bg-grey flex content-center items-center gap-4'>
+    {
+      navItems.map((item) => (
+        <a
+          href={item === 'Home' ? '/' : item.toLowerCase()}
+        >
+          {item}
+        </a>
+      ))
+    }
+  </div>
 </div>

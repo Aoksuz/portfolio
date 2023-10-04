@@ -1,5 +1,6 @@
 ---
 import Nav from '../components/Nav.astro'
+
 interface Props {
   title: string
 }
@@ -8,7 +9,7 @@ const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang='en' class='bg-white font'>
+<html lang='en'>
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content='Astro description' />
@@ -16,10 +17,12 @@ const { title } = Astro.props
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <title>{title} | Abdullah Öksuz</title>
   </head>
-  <body>
-    <Nav navItems={['Home', 'About']} />
-    <main>
-      <slot />
-    </main>
+  <body class='bg-white p-8 justify-center flex'>
+    <div class='w-[1024px]'>
+      <Nav navItems={[' Home', 'About']} />
+      <main>
+        <slot />
+      </main>
+    </div>
   </body>
 </html>

@@ -23,10 +23,14 @@ module.exports = {
     },
     fontFamily: {
       title: ['Saira', 'sans-serif'],
-      DEFAULT: ['Kanit', 'sans-serif'],
+      sans: ['Kanit', 'sans-serif'],
     },
     boxShadow: {
       DEFAULT: '0px 2px 4px 0px rgba(18, 131, 109, 0.15)',
+    },
+    fontSize: {
+      h1: '1.75rem',
+      p: '1rem',
     },
     extend: {
       borderRadius: {
