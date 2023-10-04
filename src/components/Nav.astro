@@ -10,11 +10,7 @@ const { navItems } = Astro.props
   <div class='bg-grey flex content-center items-center gap-4'>
     {
       navItems.map((item) => (
-        <a
-          href={item === 'Home' ? '/' : item.toLowerCase()}
-        >
-          {item}
-        </a>
+        <a href={item === 'Home' ? '/' : item.toLowerCase()}>{item}</a>
       ))
     }
   </div>

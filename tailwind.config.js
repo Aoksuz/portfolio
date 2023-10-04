@@ -6,36 +6,36 @@ module.exports = {
       sm: '480px',
       md: '768px',
       lg: '976px',
-      xl: '1440px',
+      xl: '1440px'
     },
     colors: {
       primary: {
         DEFAULT: '#1ABC9C',
         dark: '#12836D',
-        neon: '#249C8D',
+        neon: '#249C8D'
       },
       black: '#404040',
       grey: {
         light: '#E5E6E0',
-        DEFAULT: '#727272',
+        DEFAULT: '#727272'
       },
-      white: '#FAFAFA',
+      white: '#FAFAFA'
     },
     fontFamily: {
       title: ['Saira', 'sans-serif'],
-      sans: ['Kanit', 'sans-serif'],
+      sans: ['Kanit', 'sans-serif']
     },
     boxShadow: {
-      DEFAULT: '0px 2px 4px 0px rgba(18, 131, 109, 0.15)',
+      DEFAULT: '0px 2px 4px 0px rgba(18, 131, 109, 0.15)'
     },
     fontSize: {
       h1: '1.75rem',
-      p: '1rem',
+      p: '1rem'
     },
     extend: {
       borderRadius: {
-        small: '2rem',
-      },
-    },
-  },
+        small: '2rem'
+      }
+    }
+  }
 }
