@@ -30,7 +30,9 @@ module.exports = {
     },
     fontSize: {
       h1: '1.75rem',
-      p: '1rem'
+      p: '1rem',
+      md: '0.875rem',
+      sm: '0.75rem'
     },
     extend: {
       borderRadius: {
