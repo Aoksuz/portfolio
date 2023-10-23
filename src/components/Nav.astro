@@ -1,4 +1,12 @@
 ---
+import {
+  LinkedinIcon,
+  GithubIcon,
+  InstagramIcon,
+  PlusSquareIcon,
+  XSquareIcon
+} from 'astro-feather'
+
 interface Props {
   navItems: string[]
 }
@@ -6,12 +14,78 @@ interface Props {
 const { navItems } = Astro.props
 ---
 
-<div class='bg-primary flex h-10 font-bold'>
-  <div class='bg-grey flex content-center items-center gap-4'>
+<nav class='flex h-10 font-bold justify-between text-grey'>
+  <div class='content-center items-center gap-4 hidden md:flex'>
     {
       navItems.map((item) => (
         <a href={item === 'Home' ? '/' : item.toLowerCase()}>{item}</a>
       ))
     }
   </div>
-</div>
+  <div class='flex flex-col mt-2 md:hidden'>
+    <button class='flex gap-1' id='navToggle'>
+      <PlusSquareIcon />
+      <XSquareIcon customClasses='hidden' />
+      <span class='font-normal'>Menu</span>
+    </button>
+    <div class='flex-col gap-2 mt-3 border-b-[1px] pb-2 font-normal hidden'>
+      {
+        navItems.map((item) => (
+          <a href={item === 'Home' ? '/' : item.toLowerCase()}>{item}</a>
+        ))
+      }
+    </div>
+  </div>
+  <div
+    class='flex items-center gap-4 [&>a>svg]:w-[16px] hover:[&>a>svg]:text-primary-dark'
+  >
+    <a
+      href='https://www.linkedin.com/in/abdullah-oksuz/'
+      target='_blank'
+      aria-label='LinkedIn'
+      rel='noreferrer'
+    >
+      <LinkedinIcon />
+    </a>
+    <a
+      href='https://github.com/Aoksuz'
+      target='_blank'
+      aria-label='Github'
+      rel='noreferrer'
+    >
+      <GithubIcon />
+    </a>
+    <a
+      href='https://www.instagram.com/abd_oksz/'
+      target='_blank'
+      aria-label='Instagram'
+      rel='noreferrer'
+    >
+      <InstagramIcon />
+    </a>
+  </div>
+</nav>
+
+<script>
+  const button = document.getElementById('navToggle')
+
+  // Handle clicks on each button.
+  button.addEventListener('click', () => {
+    const menu = button.parentElement.children[1]
+    const buttonText = button.children[2]
+    const menuIcon = button.children
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden')
+      menu.classList.add('flex')
+      buttonText.innerHTML = 'Close'
+      menuIcon[0].classList.add('hidden')
+      menuIcon[1].classList.remove('hidden')
+    } else {
+      menu.classList.remove('flex')
+      menu.classList.add('hidden')
+      buttonText.innerHTML = 'Menu'
+      menuIcon[0].classList.remove('hidden')
+      menuIcon[1].classList.add('hidden')
+    }
+  })
+</script>
