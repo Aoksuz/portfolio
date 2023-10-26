@@ -4,7 +4,9 @@ import {
   GithubIcon,
   InstagramIcon,
   PlusSquareIcon,
-  XSquareIcon
+  XSquareIcon,
+  SunIcon,
+  MoonIcon
 } from 'astro-feather'
 
 interface Props {
@@ -39,6 +41,10 @@ const { navItems } = Astro.props
   <div
     class='flex items-center gap-4 [&>a>svg]:w-[16px] hover:[&>a>svg]:text-primary-dark'
   >
+    <button id='toggleTheme' class='[&>svg]:w-[16px] mr-5'>
+      <SunIcon customClasses='hidden hover:text-yellow' />
+      <MoonIcon customClasses='hover:fill-grey' />
+    </button>
     <a
       href='https://www.linkedin.com/in/abdullah-oksuz/'
       target='_blank'
@@ -88,4 +94,39 @@ const { navItems } = Astro.props
       menuIcon[1].classList.add('hidden')
     }
   })
+</script>
+
+<script>
+  const button = document.getElementById('toggleTheme')
+  const themeMode = button.children
+
+  // Handle clicks theme toggle
+  button.addEventListener('click', () => {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      themeMode[0].classList.add('hidden')
+      themeMode[1].classList.remove('hidden')
+      localStorage.theme = 'light'
+    } else {
+      document.documentElement.classList.add('dark')
+      themeMode[0].classList.remove('hidden')
+      themeMode[1].classList.add('hidden')
+      localStorage.theme = 'dark'
+    }
+  })
+
+  // Pageload
+  if (
+    localStorage.theme === 'dark' ||
+    (!('theme' in localStorage) &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    document.documentElement.classList.add('dark')
+    themeMode[0].classList.remove('hidden')
+    themeMode[1].classList.add('hidden')
+  } else {
+    document.documentElement.classList.remove('dark')
+    themeMode[0].classList.add('hidden')
+    themeMode[1].classList.remove('hidden')
+  }
 </script>

@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  darkMode: 'class',
   theme: {
     screens: {
       sm: '480px',
@@ -19,7 +20,10 @@ module.exports = {
         light: '#E5E6E0',
         DEFAULT: '#727272'
       },
-      white: '#FAFAFA'
+      yellow: '#FFAA00',
+      white: '#FAFAFA',
+      transparent: 'transparent',
+      current: 'currentColor'
     },
     fontFamily: {
       title: ['Saira', 'sans-serif'],
