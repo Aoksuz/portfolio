@@ -16,7 +16,7 @@ interface Props {
 const { navItems } = Astro.props
 ---
 
-<nav class='flex h-10 font-bold justify-between text-grey'>
+<nav class='flex h-10 justify-between'>
   <div class='content-center items-center gap-4 hidden md:flex'>
     {
       navItems.map((item) => (
@@ -28,9 +28,9 @@ const { navItems } = Astro.props
     <button class='flex gap-1' id='navToggle'>
       <PlusSquareIcon />
       <XSquareIcon customClasses='hidden' />
-      <span class='font-normal'>Menu</span>
+      <span>Menu</span>
     </button>
-    <div class='flex-col gap-2 mt-3 border-b-[1px] pb-2 font-normal hidden'>
+    <div class='flex-col gap-2 mt-3 border-b-[1px] pb-2 hidden'>
       {
         navItems.map((item) => (
           <a href={item === 'Home' ? '/' : item.toLowerCase()}>{item}</a>

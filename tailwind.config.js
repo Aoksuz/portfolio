@@ -13,7 +13,8 @@ module.exports = {
       primary: {
         DEFAULT: '#1ABC9C',
         dark: '#12836D',
-        neon: '#249C8D'
+        neon: '#249C8D',
+        select: 'rgba(26, 188, 156, 0.2)'
       },
       black: '#404040',
       grey: {
