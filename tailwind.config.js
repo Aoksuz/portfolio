@@ -16,13 +16,14 @@ module.exports = {
         neon: '#249C8D',
         select: 'rgba(26, 188, 156, 0.2)'
       },
-      black: '#404040',
+      black: '#010907',
       grey: {
         light: '#E5E6E0',
-        DEFAULT: '#727272'
+        DEFAULT: '#727272',
+        dark: '#404040'
       },
       yellow: '#FFAA00',
-      white: '#FAFAFA',
+      white: '#FBFEFE',
       transparent: 'transparent',
       current: 'currentColor'
     },
