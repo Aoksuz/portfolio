@@ -1,0 +1,11 @@
+---
+import Card from '../Card/Card.astro'
+import { projects } from './projects'
+---
+
+<div class='flex flex-col'>
+  <h2 class='mb-5 font-bold text-[18px]'>PROJECTS</h2>
+  <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    {projects.map((project) => <Card {...project} />)}
+  </div>
+</div>
