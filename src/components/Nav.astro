@@ -16,7 +16,7 @@ interface Props {
 const { navItems } = Astro.props
 ---
 
-<nav class='flex h-10 justify-between text-grey dark:text-grey-light'>
+<nav class='flex h-10 justify-between dark:text-grey-light'>
   <div class='content-center items-center gap-4 hidden md:flex'>
     {
       navItems.map((item) => (
@@ -39,10 +39,10 @@ const { navItems } = Astro.props
     </div>
   </div>
   <div
-    class='flex items-center gap-4 [&>a>svg]:w-[16px] hover:[&>a>svg]:text-primary-dark'
+    class='flex items-center gap-4 [&>a>svg]:w-[16px] hover:[&>a>svg]:text-primary [&>*>svg]:text-grey'
   >
     <button id='toggleTheme' class='[&>svg]:w-[16px] mr-5'>
-      <SunIcon customClasses='hidden hover:text-yellow' />
+      <SunIcon customClasses='hidden hover:text-yellow text-grey' />
       <MoonIcon customClasses='hover:fill-grey' />
     </button>
     <a
