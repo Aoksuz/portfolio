@@ -30,7 +30,9 @@ const { navItems } = Astro.props
       <XSquareIcon customClasses='hidden' />
       <span>Menu</span>
     </button>
-    <div class='flex-col gap-2 mt-3 border-b-[1px] pb-2 hidden'>
+    <div
+      class='flex-col gap-2 mt-3 border-b-[1px] pb-3 border-b-grey-light dark:border-b-grey hidden'
+    >
       {
         navItems.map((item) => (
           <a href={item === 'Home' ? '/' : item.toLowerCase()}>{item}</a>
