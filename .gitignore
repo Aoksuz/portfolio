@@ -22,20 +22,3 @@ lerna-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-coverage
-*.local
-
-# Editor directories and files
-.vscode/
-dev/*/.vscode/
-dev/public/
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-test-results/
-playwright-report/
