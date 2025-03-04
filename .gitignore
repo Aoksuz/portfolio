@@ -29,6 +29,7 @@ coverage
 # Editor directories and files
 .vscode/
 dev/*/.vscode/
+dev/public/
 .idea
 *.suo
 *.ntvs*
