@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/tv-ratings/:path*",
+      "source": "/dev/tv-ratings/:path*",
       "destination": "https://tv-ratings.vercel.app/:path*"
     }
   ]
