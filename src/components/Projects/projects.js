@@ -2,21 +2,31 @@ export const projects = [
   {
     title: 'Tv Ratings (under development)',
     description: 'Vue project - a TV series page to check ratings',
-    tags: ['Vue', 'Typescript', 'Vite'],
+    tags: ['Vue', 'TypeScript', 'Vite', 'Tailwind'],
     href: 'https://dev.oksuz.dk/tv-ratings'
   },
   {
     title: 'TDC - Telecommunication',
     description:
       'Crafting high-quality, adaptable code for diverse user needs, optimizing website performance, integrating diverse technologies for enhanced functionality, and collaborating on intuitive web interfaces with UX/UI teams.',
-    tags: ['React', 'Typescript', 'Gatsby', 'GraphQL', 'Jest', 'Contentful'],
+    tags: [
+      'React',
+      'TypeScript',
+      'Gatsby',
+      'GraphQL',
+      'Contentful',
+      'StoryBook',
+      'Chromatic',
+      'SEO',
+      'Jest'
+    ],
     href: 'https://tdc.dk'
   },
   {
     title: 'Minutscript',
     description:
       'Developed comprehensive web solutions using cutting-edge technologies tailored for a startup SaaS company. Designed with a user-centric approach, focusing on the entire user journey to ensure a seamless and intuitive experience.',
-    tags: ['React', 'Typescript', 'Gatsby', 'UI/UX', 'Figma'],
+    tags: ['React', 'TypeScript', 'Gatsby', 'UI/UX', 'Figma'],
     href: 'https://minutscript.vercel.app/'
   },
   {
