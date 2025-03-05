@@ -3,7 +3,7 @@ export const projects = [
     title: 'Tv Ratings (under development)',
     description: 'Vue project - a TV series page to check ratings',
     tags: ['Vue', 'TypeScript', 'Vite', 'Tailwind'],
-    href: 'https://oksuz.dk/dev/tv-ratings'
+    href: 'https://dev.oksuz.dk/tv-ratings'
   },
   {
     title: 'TDC - Telecommunication',
