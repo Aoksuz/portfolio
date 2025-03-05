@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/dev/tv-ratings/:path*",
-      "destination": "https://tv-ratings.vercel.app/:path*"
+      "source": "/tv-ratings/:path*",
+      "destination": "https://your-vue-app.vercel.app/:path*"
     }
   ]
 }
