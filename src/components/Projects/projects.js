@@ -1,5 +1,11 @@
 export const projects = [
   {
+    title: 'Tv Ratings (under development)',
+    description: 'Vue project - a TV series page to check ratings',
+    tags: ['Vue', 'Typescript', 'Vite'],
+    href: 'https://dev.oksuz.dk/tv-ratings'
+  },
+  {
     title: 'TDC - Telecommunication',
     description:
       'Crafting high-quality, adaptable code for diverse user needs, optimizing website performance, integrating diverse technologies for enhanced functionality, and collaborating on intuitive web interfaces with UX/UI teams.',
