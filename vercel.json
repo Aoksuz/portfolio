@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/tv-ratings/(.*)",
+      "destination": "https://tv-ratings.vercel.app/$1"
+    },
+    { "source": "/tv-ratings", "destination": "https://tv-ratings.vercel.app/" }
+  ]
+}
