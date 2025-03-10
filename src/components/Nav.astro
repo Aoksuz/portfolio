@@ -4,9 +4,7 @@ import {
   GithubIcon,
   InstagramIcon,
   PlusSquareIcon,
-  XSquareIcon,
-  SunIcon,
-  MoonIcon
+  XSquareIcon
 } from 'astro-feather'
 
 interface Props {
@@ -16,7 +14,7 @@ interface Props {
 const { navItems } = Astro.props
 ---
 
-<nav class='flex h-10 justify-between dark:text-grey-light'>
+<nav class='flex h-10 justify-between text-grey-light'>
   <div class='content-center items-center gap-4 hidden md:flex'>
     {
       navItems.map((item) => (
@@ -30,9 +28,7 @@ const { navItems } = Astro.props
       <XSquareIcon customClasses='hidden' />
       <span>Menu</span>
     </button>
-    <div
-      class='flex-col gap-2 mt-3 border-b-[1px] pb-3 border-b-grey-light dark:border-b-grey hidden'
-    >
+    <div class='flex-col gap-2 mt-3 border-b-[1px] pb-3 border-b-grey hidden'>
       {
         navItems.map((item) => (
           <a href={item === 'Home' ? '/' : item.toLowerCase()}>{item}</a>
@@ -43,10 +39,6 @@ const { navItems } = Astro.props
   <div
     class='flex items-center gap-4 [&>a>svg]:w-[16px] hover:[&>a>svg]:text-primary [&>*>svg]:text-grey'
   >
-    <button id='toggleTheme' class='[&>svg]:w-[16px] mr-5'>
-      <SunIcon customClasses='hidden hover:text-yellow text-grey' />
-      <MoonIcon customClasses='hover:fill-grey' />
-    </button>
     <a
       href='https://www.linkedin.com/in/abdullah-oksuz/'
       target='_blank'
@@ -75,60 +67,29 @@ const { navItems } = Astro.props
 </nav>
 
 <script>
-  const button = document.getElementById('navToggle')
-
-  // Handle clicks on each button.
-  button.addEventListener('click', () => {
-    const menu = button.parentElement.children[1]
-    const buttonText = button.children[2]
-    const menuIcon = button.children
-    if (menu.classList.contains('hidden')) {
-      menu.classList.remove('hidden')
-      menu.classList.add('flex')
-      buttonText.innerHTML = 'Close'
-      menuIcon[0].classList.add('hidden')
-      menuIcon[1].classList.remove('hidden')
-    } else {
-      menu.classList.remove('flex')
-      menu.classList.add('hidden')
-      buttonText.innerHTML = 'Menu'
-      menuIcon[0].classList.remove('hidden')
-      menuIcon[1].classList.add('hidden')
+  document.addEventListener('astro:page-load', () => {
+    const navToggle = document.getElementById('navToggle')
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        const menu = navToggle.parentElement.children[1]
+        const buttonText = navToggle.children[2]
+        const menuIcon = navToggle.children
+        if (menu) {
+          if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden')
+            menu.classList.add('flex')
+            buttonText.innerHTML = 'Close'
+            menuIcon[0].classList.add('hidden')
+            menuIcon[1].classList.remove('hidden')
+          } else {
+            menu.classList.add('hidden')
+            menu.classList.remove('flex')
+            buttonText.innerHTML = 'Menu'
+            menuIcon[0].classList.remove('hidden')
+            menuIcon[1].classList.add('hidden')
+          }
+        }
+      })
     }
   })
-</script>
-
-<script>
-  const button = document.getElementById('toggleTheme')
-  const themeMode = button.children
-
-  // Handle clicks theme toggle
-  button.addEventListener('click', () => {
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark')
-      themeMode[0].classList.add('hidden')
-      themeMode[1].classList.remove('hidden')
-      localStorage.theme = 'light'
-    } else {
-      document.documentElement.classList.add('dark')
-      themeMode[0].classList.remove('hidden')
-      themeMode[1].classList.add('hidden')
-      localStorage.theme = 'dark'
-    }
-  })
-
-  // Pageload
-  if (
-    localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
-    document.documentElement.classList.add('dark')
-    themeMode[0].classList.remove('hidden')
-    themeMode[1].classList.add('hidden')
-  } else {
-    document.documentElement.classList.remove('dark')
-    themeMode[0].classList.add('hidden')
-    themeMode[1].classList.remove('hidden')
-  }
 </script>
