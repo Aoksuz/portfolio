@@ -1,7 +1,8 @@
 export const projects = [
   {
-    title: 'Tv Ratings (under development)',
-    description: 'Vue project - a TV series page to check ratings',
+    title: 'Tv Ratings',
+    description:
+      'A TV series page to explore shows and detailed ratings through charts. This project is using an external api for data fetching. The design incorporates UI/UX principles, with a focus on developing scalable and reusable components.',
     tags: ['Vue', 'TypeScript', 'Vite', 'Tailwind'],
     href: 'https://oksuz.dk/dev/tv-ratings'
   },
