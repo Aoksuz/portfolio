@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import { Image } from 'astro:assets'
 import profileImg from '../assets/Profile.png'
+import Experiences from '../components/Experiences/Experiences.astro'
 
 const pageTitle = 'About'
 ---
@@ -48,13 +49,14 @@ const pageTitle = 'About'
         I completed my professional bachelor's degree in Web Development in
         January 2021. During my studies, I also explored freelance work,
         building hands-on experience as a frontend developer. Additionally, I
-        had the opportunity to be an intern at both <a
+        had the opportunity to be an intern at <a
           class='hover:text-primary-dark underline hover:no-underline duration-200 ease-in-out'
           href='https://nuuday.dk/'
           target='_blank'>Nuuday</a
         >, which provided valuable industry insights and ultimately led to my
         full-time position as a software engineer.
       </p>
+      <Experiences />
     </div>
     <div>
       <p>Want to know more?</p>
