@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { CornerDownLeftIcon } from 'astro-feather'
+---
+
+<Layout title='404'>
+  <div class='flex flex-col items-center w-max mt-32 mx-auto'>
+    <span class='text-h1'>error 404</span>
+    <p>this page doesn't exist</p>
+
+    <a
+      href='/'
+      class='flex items-center justify-center gap-2 px-2 mt-6 hover:bg-grey text-white rounded-md'
+    >
+      <CornerDownLeftIcon size={16} />
+      Return to home
+    </a>
+  </div>
+</Layout>
